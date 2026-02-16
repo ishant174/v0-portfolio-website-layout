@@ -2,15 +2,19 @@ import { ProfileImage } from "@/components/profile-image"
 import { AskInput } from "@/components/ask-input"
 import { NavButtons } from "@/components/nav-buttons"
 import { WatermarkText } from "@/components/watermark-text"
+import { FluidCanvas } from "@/components/fluid-canvas"
 import { Info } from "lucide-react"
 
 export default function Page() {
   return (
-    <main className="relative min-h-screen bg-secondary/30 flex items-center justify-center overflow-hidden">
+    <main className="relative min-h-screen bg-background flex items-center justify-center overflow-hidden">
+      {/* Fluid background canvas */}
+      <FluidCanvas />
+
       {/* Info button top-right */}
       <button
         type="button"
-        className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full border border-border bg-background flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors"
+        className="absolute top-4 right-4 z-20 w-8 h-8 rounded-full border border-border bg-background/80 backdrop-blur-sm flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors"
         aria-label="Information"
       >
         <Info className="w-4 h-4" />
