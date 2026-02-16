@@ -1135,8 +1135,23 @@ function correctDeltaY(delta) {
 }
 
 function generateColor() {
-  let c = HSVtoRGB(Math.random(), 1.0, 1.0);
-  c.r *= 0.15; c.g *= 0.15; c.b *= 0.15;
+  // Aesthetic pastel palette: soft greens, lavenders, peach, soft blues, mint
+  const palettes = [
+    { h: 0.45, sMin: 0.25, sMax: 0.45, vMin: 0.85, vMax: 0.95 },  // soft mint/teal
+    { h: 0.55, sMin: 0.20, sMax: 0.40, vMin: 0.85, vMax: 0.95 },  // soft blue
+    { h: 0.30, sMin: 0.25, sMax: 0.45, vMin: 0.88, vMax: 0.96 },  // soft green
+    { h: 0.75, sMin: 0.20, sMax: 0.35, vMin: 0.85, vMax: 0.95 },  // soft lavender
+    { h: 0.05, sMin: 0.20, sMax: 0.35, vMin: 0.95, vMax: 1.00 },  // soft peach
+    { h: 0.60, sMin: 0.15, sMax: 0.30, vMin: 0.88, vMax: 0.96 },  // soft periwinkle
+    { h: 0.85, sMin: 0.15, sMax: 0.30, vMin: 0.90, vMax: 0.98 },  // soft rose
+    { h: 0.12, sMin: 0.20, sMax: 0.35, vMin: 0.95, vMax: 1.00 },  // soft apricot
+  ];
+  let p = palettes[Math.floor(Math.random() * palettes.length)];
+  let hue = p.h + (Math.random() - 0.5) * 0.06;
+  let sat = p.sMin + Math.random() * (p.sMax - p.sMin);
+  let val = p.vMin + Math.random() * (p.vMax - p.vMin);
+  let c = HSVtoRGB(hue, sat, val);
+  c.r *= 0.12; c.g *= 0.12; c.b *= 0.12;
   return c;
 }
 
