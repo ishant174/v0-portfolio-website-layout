@@ -46,7 +46,7 @@ export function ContactCard() {
         <div className="mt-6 pt-4 border-t border-border">
           <h3 className="text-base font-bold text-foreground underline mb-3">Whatsapp</h3>
           <a
-            href="https://wa.me/917018512123"
+            href="https://wa.me/917018512123?text=Hi%20I%20found%20you%20on%20your%20portfolio%20and%20want%20to%20discuss%20a%20project"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-4 py-1.5 text-sm rounded-md border border-border bg-background text-foreground hover:bg-muted transition-colors"

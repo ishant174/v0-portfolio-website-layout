@@ -12,6 +12,7 @@ import { MeCard } from "@/components/me-card"
 import { SkillsCard } from "@/components/skills-card"
 import { ContactCard } from "@/components/contact-card"
 import { LocationCard } from "@/components/location-card"
+import { UpworkCard } from "@/components/upwork-card"
 import { Info } from "lucide-react"
 
 // Map button IDs to the question shown in the chat bubble
@@ -21,6 +22,7 @@ const buttonQuestions: Record<string, string> = {
   skills: "What are your skills and expertise?",
   contact: "How can I get in touch with you?",
   location: "Where are you located?",
+  upwork: "Show me your Upwork profile.",
 }
 
 type ChatMessage = {
@@ -52,39 +54,45 @@ export default function Page() {
     setView("chat")
     setActiveSection(id)
 
-    // Add the question bubble
-    setMessages((prev) => [...prev, { type: "question", text: question }])
+    // Replace all messages with just the new question
+    setMessages([{ type: "question", text: question }])
 
     // Show typing indicator after a short delay
     setTimeout(() => {
-      setMessages((prev) => [...prev, { type: "typing" }])
+      setMessages([
+        { type: "question", text: question },
+        { type: "typing" },
+      ])
     }, 300)
 
-    // Replace typing with the answer after a delay
+    // Replace typing with the answer
     setTimeout(() => {
-      setMessages((prev) => {
-        const withoutTyping = prev.filter((m) => m.type !== "typing")
-        return [...withoutTyping, { type: "answer", section: id }]
-      })
+      setMessages([
+        { type: "question", text: question },
+        { type: "answer", section: id },
+      ])
     }, 1800)
   }
 
   const handleAskSubmit = (query: string) => {
     setView("chat")
-    setMessages((prev) => [...prev, { type: "question", text: query }])
+    setActiveSection(null)
+
+    // Replace all messages with just the new question
+    setMessages([{ type: "question", text: query }])
 
     setTimeout(() => {
-      setMessages((prev) => [...prev, { type: "typing" }])
+      setMessages([
+        { type: "question", text: query },
+        { type: "typing" },
+      ])
     }, 300)
 
     setTimeout(() => {
-      setMessages((prev) => {
-        const withoutTyping = prev.filter((m) => m.type !== "typing")
-        return [
-          ...withoutTyping,
-          { type: "answer", section: "custom", text: query },
-        ]
-      })
+      setMessages([
+        { type: "question", text: query },
+        { type: "answer", section: "custom", text: query },
+      ])
     }, 1800)
   }
 
@@ -99,6 +107,8 @@ export default function Page() {
         return <ContactCard />
       case "location":
         return <LocationCard />
+      case "upwork":
+        return <UpworkCard />
       case "projects":
         return (
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
