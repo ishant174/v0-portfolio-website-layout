@@ -9,6 +9,9 @@ import { FluidCanvas } from "@/components/fluid-canvas"
 import { TypingIndicator } from "@/components/typing-indicator"
 import { ChatBubble } from "@/components/chat-bubble"
 import { MeCard } from "@/components/me-card"
+import { SkillsCard } from "@/components/skills-card"
+import { ContactCard } from "@/components/contact-card"
+import { LocationCard } from "@/components/location-card"
 import { Info } from "lucide-react"
 
 // Map button IDs to the question shown in the chat bubble
@@ -90,10 +93,24 @@ export default function Page() {
     switch (section) {
       case "me":
         return <MeCard />
+      case "skills":
+        return <SkillsCard />
+      case "contact":
+        return <ContactCard />
+      case "location":
+        return <LocationCard />
+      case "projects":
+        return (
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+            <p className="text-sm md:text-base text-foreground leading-relaxed">
+              {"I've worked on various projects including custom Shopify stores, React.js web applications, and responsive websites. I'll be adding my project showcase here soon!"}
+            </p>
+          </div>
+        )
       case "custom":
         return (
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm md:text-base text-foreground leading-relaxed">
               {"Thanks for your question! I'd love to help. Feel free to click on any of the buttons below to learn more about me, my projects, skills, or how to get in touch."}
             </p>
           </div>
@@ -101,7 +118,7 @@ export default function Page() {
       default:
         return (
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm md:text-base text-foreground leading-relaxed">
               {"Coming soon! This section is being built."}
             </p>
           </div>
