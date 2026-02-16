@@ -89,7 +89,7 @@ export function UpworkCard() {
 
           {/* CTA Button */}
           <a
-            href="https://www.upwork.com/freelancers/ishantgupta"
+            href="https://www.upwork.com/freelancers/~0144664f70febd1d18"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 w-full px-5 py-3 rounded-xl bg-[#14a800] text-white font-semibold text-sm hover:bg-[#118a00] transition-colors"

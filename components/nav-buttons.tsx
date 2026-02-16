@@ -1,10 +1,9 @@
 "use client"
 
-import { Smile, FolderOpen, Layers, Users, MapPin, MessageCircle, Briefcase } from "lucide-react"
+import { Smile, Layers, Users, MapPin, MessageCircle, Briefcase } from "lucide-react"
 
 const navItems = [
   { label: "Me", icon: Smile, id: "me" },
-  { label: "Projects", icon: FolderOpen, id: "projects" },
   { label: "Skills", icon: Layers, id: "skills" },
   { label: "Contact", icon: Users, id: "contact" },
   { label: "Location", icon: MapPin, id: "location" },

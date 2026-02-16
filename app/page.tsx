@@ -18,7 +18,6 @@ import { Info } from "lucide-react"
 // Map button IDs to the question shown in the chat bubble
 const buttonQuestions: Record<string, string> = {
   me: "Who are you? I want to know more about you.",
-  projects: "What projects have you worked on?",
   skills: "What are your skills and expertise?",
   contact: "How can I get in touch with you?",
   location: "Where are you located?",
@@ -109,14 +108,6 @@ export default function Page() {
         return <LocationCard />
       case "upwork":
         return <UpworkCard />
-      case "projects":
-        return (
-          <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <p className="text-sm md:text-base text-foreground leading-relaxed">
-              {"I've worked on various projects including custom Shopify stores, React.js web applications, and responsive websites. I'll be adding my project showcase here soon!"}
-            </p>
-          </div>
-        )
       case "custom":
         return (
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
@@ -201,7 +192,7 @@ export default function Page() {
       {/* Scrollable chat area */}
       <div
         ref={scrollRef}
-        className="relative z-10 flex-1 overflow-y-auto pointer-events-none"
+        className="relative z-10 flex-1 overflow-y-auto"
       >
         <div className="w-full max-w-2xl mx-auto px-4 pt-6 pb-48 flex flex-col gap-6">
           {/* Profile photo at top */}
