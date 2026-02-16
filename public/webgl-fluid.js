@@ -64,7 +64,7 @@ function getWebGLContext(canvas) {
     supportLinearFiltering = gl.getExtension("OES_texture_half_float_linear");
   }
 
-  gl.clearColor(0.0, 0.0, 0.0, 1.0);
+  gl.clearColor(0.0, 0.0, 0.0, 0.0);
 
   const halfFloatTexType = isWebGL2 ? gl.HALF_FLOAT : halfFloat.HALF_FLOAT_OES;
   let formatRGBA, formatRG, formatR;
@@ -613,7 +613,28 @@ let dye, velocity, divergence, curl, pressure, bloom;
 let bloomFramebuffers = [];
 let sunrays, sunraysTemp;
 
-let ditheringTexture = createTextureAsync("/LDR_LLL1_0.png");
+function createDitheringTexture() {
+  let texture = gl.createTexture();
+  gl.bindTexture(gl.TEXTURE_2D, texture);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.REPEAT);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.REPEAT);
+  let size = 128;
+  let data = new Uint8Array(size * size * 3);
+  for (let i = 0; i < size * size * 3; i++) {
+    data[i] = Math.floor(Math.random() * 256);
+  }
+  gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, size, size, 0, gl.RGB, gl.UNSIGNED_BYTE, data);
+  return {
+    texture: texture,
+    width: size,
+    height: size,
+    attach: function(id) { gl.activeTexture(gl.TEXTURE0 + id); gl.bindTexture(gl.TEXTURE_2D, texture); return id; }
+  };
+}
+
+let ditheringTexture = createDitheringTexture();
 
 const blurProgram = new Program(blurVertexShader, blurShader);
 const copyProgram = new Program(baseVertexShader, copyShader);

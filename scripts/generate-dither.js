@@ -14,6 +14,6 @@ for (let i = 0; i < size * size; i++) {
 
 await sharp(data, { raw: { width: size, height: size, channels } })
   .png()
-  .toFile('public/LDR_LLL1_0.png');
+  .toFile('/vercel/share/v0-project/public/LDR_LLL1_0.png');
 
-console.log('Dithering texture created at public/LDR_LLL1_0.png');
+console.log('Dithering texture created.');

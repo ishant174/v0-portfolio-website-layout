@@ -8,8 +8,10 @@ import { Info } from "lucide-react"
 export default function Page() {
   return (
     <main className="relative min-h-screen bg-background flex items-center justify-center overflow-hidden">
-      {/* Fluid background canvas */}
-      <FluidCanvas />
+      {/* Fluid background canvas - sits behind everything but captures mouse */}
+      <div className="absolute inset-0 z-0">
+        <FluidCanvas />
+      </div>
 
       {/* Info button top-right */}
       <button
@@ -20,8 +22,8 @@ export default function Page() {
         <Info className="w-4 h-4" />
       </button>
 
-      {/* Main card */}
-      <div className="relative z-10 w-full max-w-2xl mx-auto px-4 py-16 flex flex-col items-center gap-8">
+      {/* Main card - pointer-events-none so mouse goes through to canvas, re-enable on interactive elements */}
+      <div className="relative z-10 w-full max-w-2xl mx-auto px-4 py-16 flex flex-col items-center gap-8 pointer-events-none">
         {/* Heading */}
         <div className="text-center">
           <p className="text-lg md:text-xl font-semibold text-foreground">

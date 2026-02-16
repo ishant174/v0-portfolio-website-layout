@@ -7,7 +7,7 @@ export function AskInput() {
   const [query, setQuery] = useState("")
 
   return (
-    <div className="relative w-full max-w-lg mx-auto">
+    <div className="relative w-full max-w-lg mx-auto pointer-events-auto">
       <input
         type="text"
         value={query}

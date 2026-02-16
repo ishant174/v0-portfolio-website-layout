@@ -12,7 +12,7 @@ const navItems = [
 
 export function NavButtons() {
   return (
-    <div className="flex items-center justify-center gap-3 flex-wrap">
+    <div className="flex items-center justify-center gap-3 flex-wrap pointer-events-auto">
       {navItems.map((item) => (
         <button
           key={item.label}
