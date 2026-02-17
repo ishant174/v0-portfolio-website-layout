@@ -206,7 +206,7 @@ export default function Page() {
                   alt="ishantgupta"
                   width={80}
                   height={80}
-                  className="rounded-full object-cover w-full h-full shadow-md"
+                  className="rounded-lg object-cover w-full h-full shadow-md"
                 />
               </a>
             </div>
