@@ -13,6 +13,7 @@ import { SkillsCard } from "@/components/skills-card"
 import { ContactCard } from "@/components/contact-card"
 import { LocationCard } from "@/components/location-card"
 import { UpworkCard } from "@/components/upwork-card"
+import { TrustBadges } from "@/components/trust-badges"
 import { Info } from "lucide-react"
 
 // Map button IDs to the question shown in the chat bubble
@@ -163,29 +164,35 @@ export default function Page() {
         </div>
 
 
-        <div className="relative z-10 w-full max-w-2xl mx-auto px-4 py-16 flex flex-col items-center gap-8 pointer-events-none">
+        <div className="relative z-10 w-full max-w-2xl mx-auto px-4 py-16 flex flex-col items-center gap-6 pointer-events-none">
           <div className="text-center">
             <p className="text-lg md:text-xl font-semibold text-foreground">
               {"Hey, I'm Ishant Gupta "}
               <span role="img" aria-label="waving hand">{"👋"}</span>
             </p>
-            <h1 className="text-4xl md:text-6xl font-bold font-serif text-foreground mt-2 text-balance">
-              Freelance Web Developer
+            <h1 className="text-3xl md:text-5xl font-bold font-serif text-foreground mt-2 text-balance leading-tight">
+              Shopify & Web Developer
             </h1>
+            <p className="mt-2 text-sm md:text-base text-muted-foreground max-w-md mx-auto text-pretty">
+              Helping brands increase conversion & performance with custom eCommerce solutions.
+            </p>
           </div>
 
-          <div className="relative w-48 h-48 md:w-56 md:h-56 mx-auto">
-            <a href="/">
+          <div className="relative w-44 h-44 md:w-52 md:h-52 mx-auto">
+            <a href="/" className="pointer-events-auto">
               <Image
                 src="/images/profile.PNG"
-                alt="ishantgupta - Freelance Web Developer"
-                width={224}
-                height={224}
+                alt="Ishant Gupta - Shopify & Web Developer"
+                width={208}
+                height={208}
                 className="rounded-2xl object-cover w-full h-full shadow-lg"
                 priority
               />
             </a>
           </div>
+
+          {/* Trust badges */}
+          <TrustBadges />
 
           <AskInput onSubmit={handleAskSubmit} />
           <NavButtons onSelect={handleSelect} />
