@@ -23,25 +23,17 @@ export function NavButtons({ onSelect, activeId }: NavButtonsProps) {
           key={item.label}
           type="button"
           onClick={() => onSelect?.(item.id)}
-          className={`flex flex-col items-center justify-center gap-1.5 w-[100px] h-[80px] rounded-xl border transition-colors group ${
-            activeId === item.id
+          className={`flex flex-col items-center justify-center gap-1.5 w-[100px] h-[80px] rounded-xl border transition-colors group ${activeId === item.id
               ? "border-primary bg-primary/5"
               : "border-border bg-background hover:bg-secondary/50"
-          }`}
+            }`}
         >
-          <item.icon className={`w-5 h-5 group-hover:scale-110 transition-transform ${
-            activeId === item.id ? "text-primary" : "text-primary"
-          }`} />
+          <item.icon className={`w-5 h-5 group-hover:scale-110 transition-transform ${activeId === item.id ? "text-primary" : "text-primary"
+            }`} />
           <span className="text-xs font-medium text-foreground">{item.label}</span>
         </button>
       ))}
-      <button
-        type="button"
-        className="flex items-center justify-center w-[52px] h-[80px] rounded-xl border border-border bg-background hover:bg-secondary/50 transition-colors"
-        aria-label="Chat"
-      >
-        <MessageCircle className="w-5 h-5 text-primary" />
-      </button>
+
     </div>
   )
 }
