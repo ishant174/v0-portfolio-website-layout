@@ -200,13 +200,15 @@ export default function Page() {
           {/* Profile photo at top */}
           <div className="flex justify-center">
             <div className="relative w-20 h-20">
-              <Image
-                src="/images/profile.PNG"
-                alt="ishantgupta"
-                width={80}
-                height={80}
-                className="rounded-full object-cover w-full h-full shadow-md"
-              />
+              <a href="/">
+                <Image
+                  src="/images/profile.PNG"
+                  alt="ishantgupta"
+                  width={80}
+                  height={80}
+                  className="rounded-full object-cover w-full h-full shadow-md"
+                />
+              </a>
             </div>
           </div>
 
