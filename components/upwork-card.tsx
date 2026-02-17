@@ -102,7 +102,7 @@ export function UpworkCard() {
 
       {/* Description */}
       <p className="text-sm md:text-base text-foreground leading-relaxed">
-        {"I'm a Web developer with more than 8 years of experience in developing websites. I have done 50+ projects and I'm skilled in Shopify, Shopify theme customization, WordPress, website customization, React, and Next.js. Feel free to hire me on Upwork!"}
+        {"I’m a web developer with over 8 years of experience building modern, reliable websites for businesses across different industries. I’ve successfully delivered 50+ projects, working on everything from custom website development and platform customization to performance improvements and scalable frontend solutions. My experience includes Shopify, WordPress, React, and Next.js, allowing me to adapt to different project needs and deliver practical, results-driven solutions. If you’re looking for someone dependable to bring your ideas to life, I’d be happy to collaborate."}
       </p>
     </div>
   )
