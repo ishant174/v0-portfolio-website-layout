@@ -94,7 +94,3 @@ body {
     @apply bg-background text-foreground;
   }
 }
-
-.earnedval {
-  filter: blur(5px);
-}
