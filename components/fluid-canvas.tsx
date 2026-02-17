@@ -75,7 +75,11 @@ export function FluidCanvas() {
     <canvas
       ref={canvasRef}
       className="absolute inset-0 w-full h-full"
-      style={{ pointerEvents: "auto" }}
+      style={{
+        pointerEvents: "auto",
+        mixBlendMode: "multiply", // ⭐ KEY FIX
+        opacity: 0.9
+      }}
       aria-hidden="true"
     />
   )
