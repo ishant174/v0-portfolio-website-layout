@@ -13,6 +13,10 @@ export function TrustBadges() {
           <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
           70+ Projects Delivered
         </span>
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-foreground/[0.04] border border-border px-3.5 py-1.5 text-xs font-medium text-foreground">
+          <GraduationCap className="w-3.5 h-3.5 text-blue-500" />
+          8+ Years of Experience
+        </span>
       </div>
 
       {/* CTA link */}
