@@ -35,6 +35,7 @@ export default function Page() {
   const [messages, setMessages] = useState<ChatMessage[]>([])
   const [activeSection, setActiveSection] = useState<string | null>(null)
   const scrollRef = useRef<HTMLDivElement>(null)
+  const [showInfo, setShowInfo] = useState(false)
 
   // Auto-scroll to bottom when messages change
   useEffect(() => {
@@ -135,13 +136,32 @@ export default function Page() {
           <FluidCanvas />
         </div>
 
-        <button
-          type="button"
-          className="absolute top-4 right-4 z-20 w-8 h-8 rounded-full border border-border bg-background/80 backdrop-blur-sm flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors pointer-events-auto"
-          aria-label="Information"
-        >
-          <Info className="w-4 h-4" />
-        </button>
+        <div className="relative">
+          <button
+            aria-label="Information"
+            onClick={() => setShowInfo((prev) => !prev)}
+            className="relative"
+          >
+            {/* your existing icon */}
+          </button>
+
+          {showInfo && (
+            <div
+              className="
+        absolute right-0 mt-3 w-64
+        rounded-xl border border-border
+        bg-background/95 backdrop-blur-md
+        p-3 text-xs text-muted-foreground
+        shadow-lg
+        animate-in fade-in zoom-in-95 duration-200
+      "
+            >
+              This portfolio showcases my work in modern web development,
+              focusing on performance, clean design, and real business results.
+            </div>
+          )}
+        </div>
+
 
         <div className="relative z-10 w-full max-w-2xl mx-auto px-4 py-16 flex flex-col items-center gap-8 pointer-events-none">
           <div className="text-center">
