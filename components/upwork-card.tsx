@@ -79,7 +79,7 @@ export function UpworkCard() {
             </div>
             <div className="flex items-start gap-2">
               <Briefcase className="w-4 h-4 text-[#14a800] mt-0.5 flex-shrink-0" />
-              <span>50+ projects successfully completed</span>
+              <span>70 projects successfully completed</span>
             </div>
             <div className="flex items-start gap-2">
               <Clock className="w-4 h-4 text-[#14a800] mt-0.5 flex-shrink-0" />
