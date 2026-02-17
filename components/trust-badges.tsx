@@ -1,4 +1,4 @@
-import { Star, CheckCircle2, ArrowUpRight } from "lucide-react"
+import { Star, CheckCircle2, GraduationCap, ArrowUpRight } from "lucide-react"
 
 export function TrustBadges() {
   return (
