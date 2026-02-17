@@ -5,17 +5,47 @@ import { Layers } from "lucide-react"
 const skillCategories = [
   {
     title: "Frontend",
-    skills: ["JavaScript", "React.js", "HTML", "CSS"],
+    skills: [
+      "JavaScript",
+      "React.js",
+      "Next.js",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "Responsive Design",
+      "Cross-Browser Compatibility",
+      "Performance Optimization"
+    ],
   },
   {
-    title: "Backend",
-    skills: ["Shopify", "Web Development"],
+    title: "Backend & eCommerce",
+    skills: [
+      "Shopify",
+      "Shopify Theme Development",
+      "Liquid",
+      "Shopify Customization",
+      "Shopify APIs",
+      "WordPress",
+      "PHP",
+      "REST APIs",
+      "Custom Web Development"
+    ],
   },
   {
-    title: "Tools",
-    skills: ["Git"],
+    title: "Tools & Workflow",
+    skills: [
+      "Git",
+      "GitHub",
+      "Shopify CLI",
+      "Figma to Code",
+      "Debugging & Optimization",
+      "SEO Best Practices",
+      "Page Speed Optimization",
+      "Upwork Client Management"
+    ],
   },
 ]
+
 
 export function SkillsCard() {
   return (
