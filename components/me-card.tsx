@@ -9,15 +9,7 @@ export function MeCard() {
     <div className="w-full flex flex-col gap-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
       {/* Profile card */}
       <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start rounded-2xl border border-border bg-background/80 backdrop-blur-sm p-6">
-        <div className="relative w-40 h-40 sm:w-48 sm:h-48 flex-shrink-0">
-          <Image
-            src="/images/avatar-illustration.jpg"
-            alt="Ishant Gupta illustration"
-            width={192}
-            height={192}
-            className="rounded-2xl object-cover w-full h-full"
-          />
-        </div>
+
         <div className="flex flex-col gap-3 text-center sm:text-left">
           <div>
             <h2 className="text-2xl font-bold text-foreground font-serif">Ishant Gupta</h2>
