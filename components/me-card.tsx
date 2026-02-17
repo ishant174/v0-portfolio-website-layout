@@ -23,8 +23,9 @@ export function MeCard() {
             <h2 className="text-2xl font-bold text-foreground font-serif">Ishant Gupta</h2>
             <p className="text-sm text-muted-foreground mt-0.5">Mandi, Himachal Pradesh, India</p>
           </div>
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            {"I'm a freelance web developer specializing in custom website development, Shopify theme customization, and web performance optimization."}
+          <p className="text-sm text-muted-foreground leading-relaxed max-w-xl">
+            Freelance web developer focused on building modern, high-performance websites with clean architecture,
+            scalable solutions, and strong attention to user experience and performance.
           </p>
           <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
             {skills.map((skill) => (
