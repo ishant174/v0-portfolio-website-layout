@@ -1135,25 +1135,26 @@ function correctDeltaY(delta) {
 }
 
 function generateColor() {
-  // Aesthetic pastel palette: soft greens, lavenders, peach, soft blues, mint
+  // Vibrant aesthetic palette: rich greens, pinks, lavenders, warm yellows
   const palettes = [
-    { h: 0.45, sMin: 0.25, sMax: 0.45, vMin: 0.85, vMax: 0.95 },  // soft mint/teal
-    { h: 0.55, sMin: 0.20, sMax: 0.40, vMin: 0.85, vMax: 0.95 },  // soft blue
-    { h: 0.30, sMin: 0.25, sMax: 0.45, vMin: 0.88, vMax: 0.96 },  // soft green
-    { h: 0.75, sMin: 0.20, sMax: 0.35, vMin: 0.85, vMax: 0.95 },  // soft lavender
-    { h: 0.05, sMin: 0.20, sMax: 0.35, vMin: 0.95, vMax: 1.00 },  // soft peach
-    { h: 0.60, sMin: 0.15, sMax: 0.30, vMin: 0.88, vMax: 0.96 },  // soft periwinkle
-    { h: 0.85, sMin: 0.15, sMax: 0.30, vMin: 0.90, vMax: 0.98 },  // soft rose
-    { h: 0.12, sMin: 0.20, sMax: 0.35, vMin: 0.95, vMax: 1.00 },  // soft apricot
+  { h: 0.38, sMin: 0.50, sMax: 0.80, vMin: 0.85, vMax: 1.00 },  // vivid mint/green
+  { h: 0.28, sMin: 0.50, sMax: 0.75, vMin: 0.85, vMax: 1.00 },  // rich green
+  { h: 0.92, sMin: 0.40, sMax: 0.65, vMin: 0.90, vMax: 1.00 },  // vivid pink
+  { h: 0.83, sMin: 0.35, sMax: 0.55, vMin: 0.85, vMax: 1.00 },  // magenta/rose
+  { h: 0.72, sMin: 0.35, sMax: 0.60, vMin: 0.80, vMax: 0.95 },  // vibrant lavender
+  { h: 0.55, sMin: 0.40, sMax: 0.65, vMin: 0.80, vMax: 0.95 },  // vivid blue
+  { h: 0.13, sMin: 0.45, sMax: 0.70, vMin: 0.95, vMax: 1.00 },  // warm yellow/peach
+  { h: 0.05, sMin: 0.40, sMax: 0.60, vMin: 0.95, vMax: 1.00 },  // coral/salmon
+  { h: 0.48, sMin: 0.45, sMax: 0.70, vMin: 0.85, vMax: 1.00 },  // teal/cyan
   ];
   let p = palettes[Math.floor(Math.random() * palettes.length)];
-  let hue = p.h + (Math.random() - 0.5) * 0.06;
+  let hue = p.h + (Math.random() - 0.5) * 0.08;
   let sat = p.sMin + Math.random() * (p.sMax - p.sMin);
   let val = p.vMin + Math.random() * (p.vMax - p.vMin);
   let c = HSVtoRGB(hue, sat, val);
-  c.r *= 0.12; c.g *= 0.12; c.b *= 0.12;
+  c.r *= 0.4; c.g *= 0.4; c.b *= 0.4;
   return c;
-}
+  }
 
 function HSVtoRGB(h, s, v) {
   let r, g, b, i, f, p, q, t;

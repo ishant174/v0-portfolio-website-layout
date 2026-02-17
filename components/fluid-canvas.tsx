@@ -25,40 +25,29 @@ export function FluidCanvas() {
         cleanupRef.current = window.fluidSimulation(canvas, {
           SIM_RESOLUTION: 128,
           DYE_RESOLUTION: 1024,
-
-          // ⭐ keep colors alive longer
-          DENSITY_DISSIPATION: 0.6,
-          VELOCITY_DISSIPATION: 1.5,
-
+          CAPTURE_RESOLUTION: 512,
+          DENSITY_DISSIPATION: 0.97,
+          VELOCITY_DISSIPATION: 0.98,
           PRESSURE: 0.8,
-          PRESSURE_ITERATIONS: 25,
+          PRESSURE_ITERATIONS: 20,
           CURL: 30,
-
-          // ⭐ stronger visible splashes
-          SPLAT_RADIUS: 0.45,
+          SPLAT_RADIUS: 0.5,
           SPLAT_FORCE: 6000,
-
-          // ⭐ IMPORTANT — adds depth & contrast
           SHADING: true,
-
           COLORFUL: true,
           COLOR_UPDATE_SPEED: 10,
-
           PAUSED: false,
-
-          // keep transparent but improve visibility
           BACK_COLOR: { r: 255, g: 255, b: 255 },
           TRANSPARENT: true,
-
-          // ⭐ MAIN VISIBILITY FIX
           BLOOM: true,
           BLOOM_ITERATIONS: 8,
           BLOOM_RESOLUTION: 256,
-          BLOOM_INTENSITY: 1.1,   // was 0.4
-          BLOOM_THRESHOLD: 0.2,   // lower = more glow
-          BLOOM_SOFT_KNEE: 0.8,
-
+          BLOOM_INTENSITY: 0.8,
+          BLOOM_THRESHOLD: 0.3,
+          BLOOM_SOFT_KNEE: 0.7,
           SUNRAYS: false,
+          SUNRAYS_RESOLUTION: 196,
+          SUNRAYS_WEIGHT: 0.5,
         })
 
       }
@@ -77,8 +66,6 @@ export function FluidCanvas() {
       className="absolute inset-0 w-full h-full"
       style={{
         pointerEvents: "auto",
-        mixBlendMode: "multiply", // ⭐ KEY FIX
-        opacity: 0.9
       }}
       aria-hidden="true"
     />
