@@ -6,7 +6,7 @@ const skills = ["Shopify", "JavaScript", "Git", "React.js", "Web Development"]
 
 export function MeCard() {
   return (
-    <div className="w-full flex flex-col gap-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
+    <div className="w-full flex flex-col gap-6">
       {/* Profile card */}
       <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start rounded-2xl border border-border bg-background/80 backdrop-blur-sm p-6">
 
