@@ -1152,7 +1152,7 @@ function generateColor() {
   let sat = p.sMin + Math.random() * (p.sMax - p.sMin);
   let val = p.vMin + Math.random() * (p.vMax - p.vMin);
   let c = HSVtoRGB(hue, sat, val);
-  c.r *= 0.4; c.g *= 0.4; c.b *= 0.4;
+  c.r *= 0.25; c.g *= 0.25; c.b *= 0.25;
   return c;
   }
 
