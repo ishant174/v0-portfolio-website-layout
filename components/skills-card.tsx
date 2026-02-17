@@ -80,7 +80,7 @@ export function SkillsCard() {
 
       {/* Description */}
       <p className="text-sm md:text-base text-foreground leading-relaxed">
-        {"You can check out my skills in the list above. I have a mix of both hard and soft skills that help me excel in web development. Is there a particular skill or area you're curious about?"}
+        {"These are the tools and technologies I work with daily to build fast, reliable, and scalable websites. Along with technical expertise, I focus heavily on communication, problem-solving, and understanding business goals — because great development is not just about code, it’s about delivering results.If you’d like to know more about how I can help with your project, feel free to reach out."}
       </p>
     </div>
   )
