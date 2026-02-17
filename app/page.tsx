@@ -146,7 +146,7 @@ export default function Page() {
         <div className="relative z-10 w-full max-w-2xl mx-auto px-4 py-16 flex flex-col items-center gap-8 pointer-events-none">
           <div className="text-center">
             <p className="text-lg md:text-xl font-semibold text-foreground">
-              {"Hey, I'm ishantgupta "}
+              {"Hey, I'm Ishant Gupta "}
               <span role="img" aria-label="waving hand">{"👋"}</span>
             </p>
             <h1 className="text-4xl md:text-6xl font-bold font-serif text-foreground mt-2 text-balance">
