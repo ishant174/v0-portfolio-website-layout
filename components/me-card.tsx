@@ -41,7 +41,7 @@ export function MeCard() {
 
       {/* Description text */}
       <p className="text-sm md:text-base text-foreground leading-relaxed">
-        {"I'm Ishant Gupta, a web developer at The Brihaspati Infotech Pvt. Ltd. based in Mandi, Himachal Pradesh, India. I'm passionate about turning ideas into functional and beautiful websites that perform well. My expertise lies in JavaScript, HTML, CSS, React.js, and Shopify, among other technologies."}
+        {"I'm Ishant Gupta, I help businesses turn ideas into fast, conversion-focused websites that actually grow revenue — not just look good.With 8+ years of hands-on experience in Shopify and modern web development, I’ve worked with startups, growing brands, and established stores to solve real problems: slow websites, low conversions, and limited customization. My approach is simple — understand the business first, then build solutions that make selling easier.Clients usually come to me when they need someone reliable who can think beyond code. Whether it’s a custom Shopify feature, performance optimization, or a complete storefront rebuild, I focus on clean execution, clear communication, and long-term results.If you’re looking for a developer who treats your project like a business investment — not just another task — we’ll get along well.Let’s build something that works beautifully and performs."}
       </p>
     </div>
   )
