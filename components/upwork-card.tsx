@@ -51,7 +51,7 @@ export function UpworkCard() {
             </div>
             <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-foreground/5 text-foreground">
               <DollarSign className="w-3.5 h-3.5" />
-              <span className="text-xs font-semibold">$20.00/hr</span>
+
             </div>
           </div>
 
