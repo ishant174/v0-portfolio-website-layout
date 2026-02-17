@@ -58,7 +58,7 @@ export function UpworkCard() {
           {/* Stats grid */}
           <div className="grid grid-cols-3 gap-4 mb-6 py-5 px-4 rounded-xl bg-muted/50">
             <div className="text-center">
-              <p className="text-xl md:text-2xl font-bold text-foreground earnedval">$cnfK+</p>
+              <p className="text-xl md:text-2xl font-bold text-foreground earnedval blur-md">$cnfK+</p>
               <p className="text-xs text-muted-foreground mt-0.5">Total earnings</p>
             </div>
             <div className="text-center border-x border-border">
