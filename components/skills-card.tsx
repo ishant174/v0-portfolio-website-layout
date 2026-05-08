@@ -4,20 +4,6 @@ import { Layers } from "lucide-react"
 
 const skillCategories = [
   {
-    title: "Frontend",
-    skills: [
-      "JavaScript",
-      "React.js",
-      "Next.js",
-      "HTML5",
-      "CSS3",
-      "Tailwind CSS",
-      "Responsive Design",
-      "Cross-Browser Compatibility",
-      "Performance Optimization"
-    ],
-  },
-  {
     title: "Backend & eCommerce",
     skills: [
       "Shopify",
@@ -29,6 +15,20 @@ const skillCategories = [
       "PHP",
       "REST APIs",
       "Custom Web Development"
+    ],
+  },
+  {
+    title: "Frontend",
+    skills: [
+      "JavaScript",
+      "React.js",
+      "Next.js",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "Responsive Design",
+      "Cross-Browser Compatibility",
+      "Performance Optimization"
     ],
   },
   {
