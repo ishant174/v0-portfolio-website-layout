@@ -2,6 +2,7 @@
 
 import { Layers } from "lucide-react"
 
+
 const skillCategories = [
   {
     title: "Backend & eCommerce",
